@@ -48,9 +48,11 @@ function playRound(humanChoice, computerChoice) {
         updateScore();
         checkWinner();
         return 1;
-    } else if ((humanChoice === "rock" && computerChoice === "paper") || 
-    (humanChoice === "paper" && computerChoice === "scissors") || 
-    (humanChoice === "scissors" && computerChoice === "rock")) {
+    } else if (
+        (humanChoice === "rock" && computerChoice === "paper") || 
+        (humanChoice === "paper" && computerChoice === "scissors") || 
+        (humanChoice === "scissors" && computerChoice === "rock")
+      ) {
         /*console.log(`${humanChoice} loses to ${computerChoice}, you lose!`);*/
         result.textContent = `${humanChoice} loses to ${computerChoice}, you lose!`;
         computerScore++;
